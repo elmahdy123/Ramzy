@@ -4,6 +4,8 @@ let grade = document.querySelector('.grade');
 let weight = document.querySelector('.weight');
 let resultBtn = document.querySelector('.result-btn');
 let showResult = document.querySelector('.show-result');
+let letterGrade = document.querySelector('.letterGrade');
+
 
 
 
@@ -50,6 +52,21 @@ let showResult = document.querySelector('.show-result');
         }
 
         showResult.innerHTML = percentageSum;
+
+        if (percentageSum >= 90) {
+            letterGrade.innerHTML = "A"
+
+        } else if (percentageSum >= 80) {
+            letterGrade.innerHTML = "B"
+
+        } else if (percentageSum >= 70) {
+            letterGrade.innerHTML = "C"
+
+        } else if (percentageSum >= 50) {
+            letterGrade.innerHTML = "C"
+        } else {
+            letterGrade.innerHTML = "F"
+        }
 
     })  
 
